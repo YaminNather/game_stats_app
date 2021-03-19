@@ -37,8 +37,13 @@ class WBaseStats extends StatelessWidget {
       new StatData("Velocity", 20)
     ];
 
-    for(StatData d in data)
-      stats.add(new WGrowingBar(d._mname, d._mpercentage, _mgunData.fgetColorFromGunData()));      
+    for(StatData d in data) {
+      stats.add(
+        new WGrowingBar(
+          d._mname, d._mpercentage, _mgunData.fgetColorFromGunData()
+        )
+      );      
+    }
 
     return new Column(children: stats);
   }
