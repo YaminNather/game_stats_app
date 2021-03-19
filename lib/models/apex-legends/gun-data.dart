@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class GunData {
   GunData(this.mname, this.mweaponType, this.mammoType, this.mweaponStats);
 
-   Color fgetColorFromGunData() {
+  Color fgetColorFromGunData() {
     switch(mammoType) {
       case AmmoTypes.Light: return Colors.brown;
       case AmmoTypes.Heavy: return Colors.blue[400];
@@ -64,7 +64,7 @@ class GunData {
   final String mname;
   final WeaponTypes mweaponType;
   final AmmoTypes mammoType;  
-  final WeaponStats mweaponStats;
+  final WeaponStats mweaponStats;  
 }
 
 class WeaponStats {
@@ -78,7 +78,7 @@ class WeaponStats {
   final double mfireRate;
   final int mmagSize;
   final double mreloadDuration;
-  final double mdamageInfo;
+  final DamageInfo mdamageInfo;
 }
 
 class DamageInfo {
