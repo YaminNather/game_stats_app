@@ -63,18 +63,35 @@ class GunData {
 
   final String mname;
   final WeaponTypes mweaponType;
-  final AmmoTypes mammoType;
+  final AmmoTypes mammoType;  
   final WeaponStats mweaponStats;
 }
 
 class WeaponStats {
-  WeaponStats(this.mttk, this.mdps, this.mfireRate, this.mmagSize, this.mreloadDuration);
+  WeaponStats(
+    this.mttk, this.mdps, this.mfireRate, this.mmagSize, this.mreloadDuration,
+    this.mdamageInfo
+  );
 
   final double mttk;
   final double mdps;
   final double mfireRate;
   final int mmagSize;
   final double mreloadDuration;
+  final double mdamageInfo;
+}
+
+class DamageInfo {
+  DamageInfo(
+    this.mupperTorso, this.mlowerTorso, this.mupperLimbs, this.mlowerLimbs, 
+    this.mhead
+  );
+
+  final int mupperTorso;
+  final int mlowerTorso;
+  final int mupperLimbs;
+  final int mlowerLimbs;
+  final int mhead;
 }
 
 enum WeaponTypes { SubmachineGun, AssaultRifle, Shotgun, LightMachineGun, Sniper, Pistol }
