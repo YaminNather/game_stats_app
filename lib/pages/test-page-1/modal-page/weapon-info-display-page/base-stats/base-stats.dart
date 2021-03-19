@@ -31,15 +31,24 @@ class WBaseStats extends StatelessWidget {
   Widget lfbuildStats() {
     List<Widget> stats = [];
 
-    List<List<dynamic>> data = [
-      ["TTK", 100], ["DPS", 70], ["Ammo", 30], ["Range", 50], ["Velocity", 20]
+    List<StatData> data = <StatData>[
+      new StatData("TTK", 100), new StatData("DPS", 70), 
+      new StatData("Ammo", 30), new StatData("Range", 50), 
+      new StatData("Velocity", 20)
     ];
 
-    for(List<dynamic> d in data)
-      stats.add(new WGrowingBar(d[0], d[1], _mgunData.fgetColorFromGunData()));      
+    for(StatData d in data)
+      stats.add(new WGrowingBar(d._mname, d._mpercentage, _mgunData.fgetColorFromGunData()));      
 
     return new Column(children: stats);
   }
 
   final GunData _mgunData;
+}
+
+class StatData {
+  StatData(this._mname, this._mpercentage);
+
+  final String _mname;
+  final int _mpercentage;
 }
