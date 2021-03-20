@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:game_stats_app/pages/test-page/test-page.dart';
+import 'package:game_stats_app/widgets/counter/counter-test-page.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: 'Flutter Demo', theme: theme, 
       routes: <String, Widget Function(BuildContext)> {
-        "/Home" : (buildContext) => new WTestPage(),        
+        "/Home" : (buildContext) => new WCounterTestPage()
       }, initialRoute: "/Home"
     );
   }
