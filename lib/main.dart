@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: 'Flutter Demo', theme: theme, 
       routes: <String, Widget Function(BuildContext)> {
-        "/Home" : (buildContext) => new WCounterTestPage()
+        "/Home" : (buildContext) => new WTestPage()
       }, initialRoute: "/Home"
     );
   }
