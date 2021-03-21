@@ -35,9 +35,7 @@ class _WCounterTestPageState extends State<WCounterTestPage> {
 
           new SizedBox(width: 20.0),
 
-          new WCounter(          
-            0, mheight: 50.0, mlowerRange: 0, mupperRange: 5              
-          )
+          new WCounter(0, mheight: 50.0, mlowerRange: 0, mupperRange: 5)
         ]
       ),
     );

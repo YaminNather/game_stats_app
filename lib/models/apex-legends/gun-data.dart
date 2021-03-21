@@ -64,7 +64,7 @@ class GunData {
   final String mname;
   final WeaponTypes mweaponType;
   final AmmoTypes mammoType;  
-  final WeaponStats mweaponStats;  
+  final WeaponStats mweaponStats;
 }
 
 class WeaponStats {

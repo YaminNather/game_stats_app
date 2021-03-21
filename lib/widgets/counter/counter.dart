@@ -77,7 +77,7 @@ class _WCounterState extends State<WCounter> {
         return new AnimatedContainer(
           width: diameter, height: diameter,          
           decoration: _mcircleBoxDecoration.copyWith(
-            color: theme.canvasColor, 
+            color: theme.cardColor, 
             boxShadow: [
               new BoxShadow(blurRadius: 2, offset: new Offset(1, 1))
             ]
@@ -134,6 +134,7 @@ class _WCounterState extends State<WCounter> {
       }
     );
   }
+
 
 
   int _mvalue = 0;

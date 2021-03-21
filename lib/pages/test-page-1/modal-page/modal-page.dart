@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import 'package:game_stats_app/models/apex-legends/gun-data.dart';
+import 'package:game_stats_app/pages/test-page-1/modal-page/damage-calculator-page/damage-calculator-page.dart';
 import 'package:game_stats_app/pages/test-page-1/modal-page/weapon-info-display-page/weapon-info-display-page.dart';
 
 class WModalPage extends StatelessWidget {
@@ -41,7 +42,7 @@ class WModalPage extends StatelessWidget {
       children: [
         new WWeaponInfoDisplayPage(_mgunData),
         
-        new WWeaponInfoDisplayPage(_mgunData)
+        new WDamageCalcPage(_mgunData)
       ],
     );
   }

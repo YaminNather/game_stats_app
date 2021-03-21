@@ -48,8 +48,14 @@ class _WGrowingBarState extends State<WGrowingBar> {
               child: new LayoutBuilder(
                 builder: (_, constraints) {
                   return new AnimatedContainer(
-                    width: _mwidthMultiplier * constraints.maxWidth, height: 40.0, 
-                    duration: new Duration(seconds: 1), color: widget._mcolor, 
+                    decoration: new BoxDecoration(
+                      color: widget._mcolor, 
+                      boxShadow: [
+                        new BoxShadow(blurRadius: 3, offset: new Offset(0, 1))
+                      ]
+                    ),
+                    width: _mwidthMultiplier * constraints.maxWidth,
+                    height: 40.0, duration: new Duration(seconds: 1), 
                     curve: Curves.easeOut,
                   );
                 },
